@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1>freeCodeCamp Survey Form</h1>
-    <p>Thank you for taking the time to help us improve the platform</p>
-    <form action="https://register-demo.freecodecamp.org">
-      <!-- Do i need to make a fieldset? 
-      Let's try. -->
-      <fieldset>
-        <label for="name">Name <input id="name" type="text" required></label>
-        <label for="email">Email <input id="email" type="email" required></label>
-        <label for="age">Age (optional) <input id="age" type="number"></label>
-      </fieldset>
-
-      <fieldset>
-        <label>Which option best describes your current role?
-          <select>
+    <header>
+      <h1>freeCodeCamp Survey Form</h1>
+      <p>Thank you for taking the time to help us improve the platform</p>
+    </header>
+    <main>
+      <form action="https://register-demo.freecodecamp.org">
+        <label for="name">Name 
+          <input type="text" id="name" placeholder="Enter your name" required>
+        </label>
+        <label for="email">Email
+          <input type="email" id="email" placeholder="Enter your Email" required>
+        </label>
+        <label for="age">Age (optional)
+          <input type="number" min="13" max="65" placeholder="Age">
+        </label>
+        <label for="role">Which option best describes your current role?
+          <select id="role">
             <option>Select current role</option>
             <option>Student</option>
             <option>Full Time Job</option>
@@ -27,33 +29,50 @@
             <option>Other</option>
           </select>
         </label>
-      </fieldset>
-
-      <fieldset>Would you recommend freeCodeCamp to a friend?
-        <label><input type="radio" name="recommendation"> Definitely</label>
-        <label><input type="radio" name="recommendation"> Maybe</label>
-        <label><input type="radio" name="recommendation"> Not Sure</label>
-      </fieldset>
-
-      <fieldset>What is your favorite feature of freeCodeCamp?</fieldset>
-
-      <fieldset>What would you like to see improved? (Check all that apply)
-        <label><input type="checkbox"> Front-end Projects</label>
-        <label><input type="checkbox"> Back-end Projects</label>
-        <label><input type="checkbox"> Data Visualization</label>
-        <label><input type="checkbox"> Challenges</label>
-        <label><input type="checkbox"> Open Source Community</label>
-        <label><input type="checkbox"> Gitter help rooms</label>
-        <label><input type="checkbox"> Videos</label>
-        <label><input type="checkbox"> City Meetups</label>
-        <label><input type="checkbox"> Wiki</label>
-        <label><input type="checkbox"> Forum</label>
-        <label><input type="checkbox"> Additional Courses</label>
-      </fieldset>
-
-      <fieldset>Any comments or suggestions?</fieldset>
-      
-      <input type="submit" value="Submit">
-    </form>
+        <label>Would you recommend freeCodeCamp to a friend?
+          <label for="definitely">
+            <input type="radio" id="definitely" name="recommender"> Definitely
+          </label>
+          <label for="maybe">
+            <input type="radio" id="maybe" name="recommender"> Maybe
+          </label>
+          <label>
+            <input type="radio" id="not-sure" name="recommender"> Not sure
+          </label>
+        </label>
+        <label for="feature">
+          <select id="feature">
+            <option>Select an option</option>
+            <option>Challenges</option>
+            <option>Projects</option>
+            <option>Community</option>
+            <option>Open Source</option>
+          </select>
+        </label>
+        <label>What would you like to see improved? (Check all that apply)
+          <label for="front-end">
+            <input type="checkbox" id="front-end"> Front-end Projects
+          </label>
+          <label for="back-end">
+            <input type="checkbox" id="back-end"> Back-end Projects
+          </label>
+          <label for="visualization">
+            <input type="checkbox" id="visualization""> Data Visualization
+          </label>
+        </label>
+        <label for="challenge">
+            <input type="checkbox" id="challege"> Challenges
+        </label>
+        <label for="visualization">
+            <input type="checkbox" id="">
+        </label>
+        <label for="visualization">
+            <input type="checkbox" id="">
+        </label>
+        <label for="visualization">
+            <input type="checkbox" id="">
+        </label>
+      </form>
+    </main>
   </body>
 </html>
